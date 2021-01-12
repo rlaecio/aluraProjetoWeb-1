@@ -1,15 +1,7 @@
-body div {
-    border-left: 30px solid red;
-    border-bottom: 30px solid transparent;
-    border-top: 30px solid transparent;
-    border-right: 30px solid red;
-    width: 0;
+.balao {
+    color: brown;
+    background-color: blueviolet;
+    transform: translateX(300px) scale(1.5) rotate(45deg);
+  
 }
 
-body footer div {
-    border-left: 30px solid red;
-    border-bottom: 30px solid red;
-    border-top: 30px solid transparent;
-    border-right: 30px solid transparent;
-    width: 0;
-}
