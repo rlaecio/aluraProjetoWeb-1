@@ -5,6 +5,9 @@
     margin: 1em 2em;
     width: 30ch;
     box-sizing: border-box;
+
+    transition: transform 1s, box-shadow 2s;
+    transition-delay: 0s, 1s;
 }
 
 .petrobras {
@@ -16,3 +19,97 @@
     float: right;
     margin-right: 0;
 }
+
+.citacao-bio:hover, 
+.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+}
+
+.citacao-bio:nth-of-type(odd):hover,
+.citacao-bio:nth-of-type(odd):focus {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.citacao-bio:nth-of-type(even):hover,
+.citacao-bio:nth-of-type(even):focus  {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.citacao-bio::before {
+    content: '“';
+    position: absolute;
+    font-size: 10em;
+    color: #bbb;
+    line-height: .8;
+}
+
+.citacao-bio > p {
+    position: relative;
+}
+
+.container > p::first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    color: #3C1D3D;
+    text-shadow: 1px 1px #000;
+    margin-right: .2ch;
+    line-height: 1;
+}
+
+.habilidades th,
+.habilidades td {
+    padding: 1em;
+}
+
+.habilidades {
+    border-collapse: separate;
+    border-spacing: .25em;
+}
+
+th {
+    background-color: red;
+    border: 5px solid black;
+}
+
+td {
+    background-color: blue;
+    border: 5px solid black;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.habilidades th {
+    font-weight: bold;
+    background-color: #851944;
+    color: white;
+}
+
+.habilidades thead th {
+    /* não precisamos colocar font-weight e color
+       pois já fizemos isso para todos os th */
+      background-color: #3C1D3D;
+  }
+
+.habilidades th,
+.habilidades td {
+    padding: 1em;
+}
+
+.habilidades {
+    border-collapse: separate;
+    border-spacing: .25em;
+    margin: 1em 0;
+}
+
+.habilidades [colspan] {
+    text-align: center;
+    font-style: italic;
+}
+
+.habilidades [rowspan] {
+    vertical-align: middle;
+}
+

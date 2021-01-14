@@ -39,6 +39,14 @@ main p {
   margin: 1em 0;
 }
 
+main a:hover,
+main a:focus,
+footer a:hover,
+footer a:focus {
+    color: red;
+}
+
+
 .navegacao-site {
   text-align: center;
   background-color: #3c1d3d;
@@ -56,6 +64,13 @@ main p {
   font-size: 1.5em;
   margin-bottom: 1em;
 }
+
+.navegacao-site a:hover,
+.navegacao-site a:focus {
+    text-shadow: 0 0 2px pink;
+}
+
+
 
 .rodape-pagina {
   background-color: rgba(0, 0, 0, 0.3);
@@ -124,6 +139,7 @@ main {
   width: 80%;
   float: left;
   padding-bottom: 4em;
+  width: calc(100% - 0.9 * 300px);
 }
 
 .minha-foto,
@@ -138,6 +154,8 @@ main {
   float: right;
   position: relative;
   top: 300px;
+  width: calc(0.9 * 300px);
+
 }
 
 .minha-foto {
@@ -146,3 +164,20 @@ main {
   right: 0;
   height: 300px;
 }
+
+.icones-redes-sociais a {
+    position: relative;
+}
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-indent: 0;
+    width: 300%;
+    background: black;
+    font-size: .75em;
+}
+
